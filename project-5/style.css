@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,500;1,400&display=swap');
+
+/* font-family: 'Bebas Neue', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Mono', monospace;
+
+
+Title- Bebas Neue- 98 px
+Heading -Montserrat Bold- 50px
+Text -Montserrat -32px
+*/
+:root {
+  --blue-color: #5A45DD;
+  --white-color:#FFFFFF;
+  --black-color:#101010;
+
+}
+
+
+body{
+  background-color: black;
+  overflow-x: hidden;
+}
+.head {
+    background-color: black;
+  }
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    margin-left: 20px;
+    opacity: 0.5;
+  }
+.navbar-nav .nav-item .nav-link.active{
+  opacity: 1;
+}
+
+.btn{
+  opacity: 0.5;
+}
+
+
+.navbar-toggler-icon {
+   
+    background-color: white;
+  }
+
+/* service title */
+.service-title{
+  color: #FFF;
+  font-family: 'Montserrat';
+  /* font-size: 50.381px; */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64.181px; /* 127.39% */
+  letter-spacing: 4.282px;
+  }
+.custom-box{
+  width: 240px;
+  height: 285px;
+  border-radius: 6.157px;
+  background: #FFF;
+  margin-right: 20px;
+}
+.cardImg{
+  background-size: cover;
+  object-fit: cover;
+   background-position: center;
+  width: 130px;
+     height: 130px;
+}
+.content h1,p{
+  color: white;
+}
+.content span{
+  color: #9B8EEB;;
+}
+img{
+  object-fit: cover;
+  margin-left: 150px;
+}
+/* accordian */
+.btn-link {
+  background-color: white;
+  color: red;
+}
+.btn-link{
+  text-decoration: none;
+}
+.card{
+  border: none;
+  
+}
+.card-header {
+  background-color: transparent;
+}
