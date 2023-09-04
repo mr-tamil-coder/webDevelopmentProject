@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <style>
+        /*
+        why inspect me i think you search me name??
+
+        clue:mohanraj
+        find it buddy!
+        */
+
+        /* Improved CSS for the CGPA Calculator */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+.forms {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .forms {
+        max-width: 90%;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>CGPA Calculator</h1>
+    <div class="forms"> 
+    <form id="cgpaForm"><br>
+    <label for="scienceGrade">Grade for APPLIED SCIENCE[JBE1223]:</label>
+        <select id="scienceGrade" name="scienceGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label for="dlfGrade">Grade for DIGITAL LOGIC FUNDAMENTALS[JEC1204]:</label>
+        <select id="dlfGrade" name="dlfGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label for="dlfLabGrade">Grade for DIGITAL LOGIC FUNDAMENTALS LABORATORY[JEC1214]:</label>
+        <select id="dlfLabGrade" name="dlfLabGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label for="pythonGrade">Grade for PYTHON PROGRAMMING[JGE1201]:</label>
+        <select id="pythonGrade" name="pythonGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label for="engGraphicsGrade">Grade for ENGINEERING GRAPHICS AND DESIGN[JGE1202]:</label>
+        <select id="engGraphicsGrade" name="engGraphicsGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label for="tamilGrade">Grade for HERITAGE OF TAMILS[JGE1209]:</label>
+        <select id="tamilGrade" name="tamilGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label>Grade for PYTHON PROGRAM Lab[JGE1211]:</label>
+        <select id="pythonLabGrade" name="pythonLabGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label>Grade for TECHNICAL ENGLISH AND SOFT SKILLS:[JHS1221]</label>
+        <select id="englishGrade" name="englishGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label>Grade for VECTOR CALCULUS AND COMPLEX ANALYSIS[JMA1201]:</label>
+        <select id="mathsGrade" name="mathsGrade">
+            <option value="">Enter Grade</option>
+            <option value="10">O</option>
+            <option value="9">A+</option>
+            <option value="8">A</option>
+            <option value="7">B+</option>
+            <option value="6">B</option>
+            <option value="5">C</option>
+            <option value="0">U</option>
+        </select><br><br>
+
+        <label>Grade for ENVIRONMENT SCIENCE[JNC1261]:</label>
+        <select id="evsGrade" name="evsGrade">
+            <option value="">Enter Grade</option>
+            <option value="0">FAIL</option>
+            <option value="1">PASS</option>
+            
+        </select><br><br>
+        <div class="mo"> 
+        <input type="submit" value="Calculate CGPA"></div>
+    </form>
+
+    <div id="result" class="result"></div>
+  
+</div>
+    <script>
+        var count=0;
+        document.getElementById("cgpaForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Retrieve values from form
+            var scienceGrade = parseFloat(document.getElementById("scienceGrade").value);
+            var dlfGrade = parseFloat(document.getElementById("dlfGrade").value);
+            var dlfLabGrade = parseFloat(document.getElementById("dlfLabGrade").value);
+            var pythonGrade = parseFloat(document.getElementById("pythonGrade").value);
+            var engGraphicsGrade = parseFloat(document.getElementById("engGraphicsGrade").value);
+            var tamilGrade = parseFloat(document.getElementById("tamilGrade").value);
+            var pythonLabGrade = parseFloat(document.getElementById("pythonLabGrade").value);
+            var englishGrade = parseFloat(document.getElementById("englishGrade").value);
+            var mathsGrade = parseFloat(document.getElementById("mathsGrade").value);
+            var evsGrade = parseFloat(document.getElementById("evsGrade").value);
+
+
+           
+
+            // Define credit hours for each component
+            const theoryCredit = 3;
+            const labCredit = 2;
+            const evsCredit = 0;
+            const tamilCredit = 1;
+
+        
+            // Calculate total grade points
+            var totalGradePoints = (scienceGrade * theoryCredit) + (dlfGrade * theoryCredit) + (pythonGrade * theoryCredit) +
+                (engGraphicsGrade * theoryCredit) + (englishGrade * theoryCredit) + (mathsGrade * theoryCredit) +
+                (tamilGrade * tamilCredit) + (pythonLabGrade * labCredit) + (dlfLabGrade * labCredit);
+
+           // Check for any failed courses (grade 0)
+           if (scienceGrade === 0 || dlfGrade === 0 || dlfLabGrade === 0 || pythonGrade === 0 ||
+                engGraphicsGrade === 0 || tamilGrade === 0 || pythonLabGrade === 0 ||
+                englishGrade === 0 || mathsGrade === 0 || evsGrade === 0) {
+                document.getElementById("result").innerHTML = "We cannot calculate your CGPA bcoz of an arrear :(";
+            } 
+            else{ 
+            // Calculate CGPA
+            var totalCredits = (theoryCredit * 6) + (labCredit*2) + (tamilCredit * 1) ;
+            var cgpa = totalGradePoints / totalCredits;
+           
+            // Display CGPA
+            document.getElementById("result").innerHTML = "SEM 2 CGPA: " + cgpa.toFixed(5);
+           
+        }});
+
+      
+    </script>
+</body>
+</html>
